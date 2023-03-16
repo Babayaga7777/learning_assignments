@@ -1,0 +1,72 @@
+.sections{
+    width: 100vw;
+    height: 100vh;
+    background-color: blue;
+    border-color: black;
+    display: flex;
+    flex-direction:column;
+    
+}
+
+.about{
+    padding-top: 25px;
+    width: auto;
+    height:10%;
+    background-color: white;
+    display: flex;
+    flex-direction:row;
+    justify-content:space-between;
+    color: black;
+}
+
+.blog{
+    width: auto;
+    height:40%;
+    background-color: rgb(94, 94, 106);
+}
+
+.name{
+    font-size:x-large;
+}
+
+.content{
+    display: flex;
+    border-color: black;
+    flex-direction: row;
+}
+
+.content p{
+    font-size: larger;
+    margin: 5px 20px 5px 20px;
+
+}
+
+
+
+.blank{
+    flex-direction: row;
+    display: flex;
+    position:relative;
+    width: 50%;
+    height: 300px;
+    background-color: rgb(246, 243, 243);
+    font-size:1200%;
+}
+
+.blank p{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    opacity: 70%;
+    justify-content: center;
+    
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+</head>
+
+<body>
+
+<input id="addData" type="text"></input><button onclick="onSubmitClick()">Submit</button>
+<input id="removeData" type="text"><button onclick="del()" >Remove</button>
+<input id="editData" type="text"><button onclick="edit()">a,b;b replaces a</button>
+
+<div id="todoList"> </div>
+
+<!-- start of java script -->
+<script>
+let dataFromLocalStorage = window.localStorage.getItem('todo');
+var todoList = [];
+//loading data from local storage to todolist
+if(dataFromLocalStorage){
+todoList = JSON.parse(dataFromLocalStorage).todoArray;
+}
+renderHtml()
+function onSubmitClick(){
+let inputvalue = document.getElementById("addData").value;
+console.log(inputvalue);
+if(inputvalue != ""){
+todoList.push(inputvalue);
+}
+console.log(todoList);
+document.getElementById("addData").value = "";
+renderHtml();
+let dataStore = {
+todoArray : todoList
+}
+dataStore = JSON.stringify(dataStore);
+window.localStorage.setItem("todo", dataStore)
+
+}
+
+function del(){
+    let deletingItems = document.getElementById("removeData").value;
+    console.log(deletingItems)
+    console.log(todoList)
+    if (todoList.indexOf(deletingItems) != -1){
+        let index = todoList.indexOf(deletingItems)
+        todoList.splice(index,1)
+
+
+    }
+    renderHtml()
+}
+
+function edit(){
+    let editdata = document.getElementById("editData").value;
+    console.log(todoList)
+    console.log(editdata)
+    let index = todoList.indexOf(editData[0])
+    todoList.splice(index,1)
+    todoList.splice(index,0,editData[1])
+    renderHtml()
+    
+
+}
+
+
+function renderHtml(){
+let todoListElement = document.getElementById("todoList");
+
+let html = ""
+todoList.map((todo,index)=>{
+html = html + `<div> ${todo} </div>`
+})
+
+todoListElement.innerHTML = html;
+}
+</script>
+</body>
+</html>
+
