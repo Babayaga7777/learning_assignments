@@ -1,0 +1,33 @@
+.movie-card {
+ border: 2px solid red; 
+  min-height: 550px;
+  max-width: 350px;
+
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+
+.movie-poster {
+  text-align: center;
+
+}
+
+.movie-title {
+  color: yellow;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+
+.movie-desc {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem;
+  padding-bottom: 0;
+}
+
+.movie-read-more {
+  color: #0ba376;
+  text-decoration: none;
+}

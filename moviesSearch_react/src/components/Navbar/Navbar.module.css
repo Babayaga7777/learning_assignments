@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+.navbar {
+  background-color: rgb(58, 168, 74);
+  color: black;
+  width: 100vw;
+  padding: 1rem;
+}
+
+.app-name {
+  font-size: 2rem;
+  font-weight: bolder;
+  font-family: 'Roboto', sans-serif;
+}
